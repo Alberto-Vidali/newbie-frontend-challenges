@@ -10,7 +10,7 @@
         <header class="absolute top-0">
             <img src="/background-pattern-mobile.svg" alt="">
         </header>
-        <main class="z-10 flex justify-between items-center">
+        <main class="z-10 absolute top-[10%]">
             <slot/>
         </main>
         <footer>
