@@ -3,11 +3,11 @@
 </script>
 
 <template>
-    <body class="min-h-screen">
+    <section class="min-h-screen bg-gray-200 flex flex-col items-center justify-between">
         <header>
             
         </header>
-        <main>
+        <main class="bg-white mx-5 h-[575px]">
             <slot/>
         </main>
         <footer>
@@ -16,12 +16,12 @@
                 Coded by <a href="#">Hazerin</a>.
             </div>
         </footer>
-    </body>
+    </section>
 </template>
 
 <style scoped>
     .attribution { 
-        font-size: 11px; 
+        font-size: 15px; 
         text-align: center; 
     }
     .attribution a { 
