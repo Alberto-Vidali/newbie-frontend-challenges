@@ -1,5 +1,24 @@
 <script setup>
 
+    import { ref, onMounted, onUnmounted } from 'vue';
+
+    let mobileMode = ref(0)
+
+    const checkWidth = () => {
+        mobileMode.value = window.innerWidth <= 375 ? 1 : 0
+    }
+
+    // Viene eseguita all'avvio del programma
+    onMounted(() => {
+        checkWidth()
+        window.addEventListener('resize', checkWidth)
+    })
+
+    // Rimuove l'event listener se il componente viene smontato
+    onUnmounted(() => {
+        window.removeEventListener('resize', checkWidth)
+    })
+    
 </script>
 
 <template>
@@ -8,7 +27,8 @@
 
         </div>
         <header class="absolute top-0">
-            <img src="/background-pattern-mobile.svg" alt="">
+            <img src="/background-pattern-mobile.svg" alt="" v-if="mobileMode == 1">
+            <img src="/background-pattern-desktop.svg" alt="" v-if="mobileMode == 0">
         </header>
         <main class="z-10 absolute top-[10%]">
             <slot/>
