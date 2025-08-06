@@ -1,5 +1,6 @@
 <script setup>
     import { faqs } from '../utils';
+    import { ref } from 'vue';
 
     // Numero in array dei valori per il v-for
     for (let faq in faqs) {
@@ -9,7 +10,7 @@
     // Accesso ai valori di domande e risposte
     console.log(faqs[0].faq[0].question)
 
-    const buttonPressed = [0,0,0,0]
+    let buttonPressed = ref([0,0,0,0])
     
 </script>
 
@@ -20,8 +21,11 @@
             <h2 class=" max-w-[75%]">
                 {{ faqs[faqIdx].faq[0].question }}
             </h2>
-            <button class="w-[30px] aspect-[1/1]">
+            <button @click="() => buttonPressed[faqIdx] = 1" class="w-[30px] aspect-[1/1]" v-if="buttonPressed[faqIdx] == 0">
                 <img class="w-full" src="/icon-plus.svg" alt="plus">
+            </button>
+            <button @click="() => buttonPressed[faqIdx] = 0" class="w-[30px] aspect-[1/1]" v-if="buttonPressed[faqIdx] == 1">
+                <img class="w-full" src="/icon-minus.svg" alt="plus">
             </button>
         </div>
         <p>
