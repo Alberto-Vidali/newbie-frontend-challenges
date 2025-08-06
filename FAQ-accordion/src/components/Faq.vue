@@ -17,14 +17,14 @@
 <template>
     <section class="flex flex-col gap-4" v-for="faqIdx in Object.keys(faqs)">
         <hr v-if="faqIdx != 0">
-        <div class="flex items-center justify-between gap-2">
+        <div class="flex items-center justify-between gap-2 text-nowrap">
             <h2 class=" max-w-[75%] font-bold hover:text-purple-600 cursor-pointer" @click="() => {
                 if (buttonPressed[faqIdx] == 0) {
                 buttonPressed[faqIdx] = 1
-                } 
-                else {
-                    buttonPressed[faqIdx] = 0
-                }
+            } 
+            else {
+                buttonPressed[faqIdx] = 0
+            }
             }">
                 {{ faqs[faqIdx].faq[0].question }}
             </h2>

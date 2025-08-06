@@ -8,7 +8,7 @@
         mobileMode.value = window.innerWidth <= 375 ? 1 : 0
     }
 
-    // Viene eseguita all'avvio del programma
+    // Viene eseguita all'avvio del programma. L'event listener attiverà la funzione ogni volta che si verifica l'evento.
     onMounted(() => {
         checkWidth()
         window.addEventListener('resize', checkWidth)
@@ -30,7 +30,7 @@
             <img src="/background-pattern-mobile.svg" alt="" v-if="mobileMode == 1">
             <img src="/background-pattern-desktop.svg" alt="" v-if="mobileMode == 0">
         </header>
-        <main class="z-10 absolute top-[10%]">
+        <main class="z-10 absolute top-[10%] xl:top-[17.5%]">
             <slot/>
         </main>
         <footer>
