@@ -7,7 +7,7 @@
         <header>
             
         </header>
-        <main class="bg-white mx-5 h-[575px]">
+        <main class="bg-white mx-5 h-[575px] rounded-2xl">
             <slot/>
         </main>
         <footer>
