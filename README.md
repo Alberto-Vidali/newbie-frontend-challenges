@@ -4,4 +4,4 @@ Queste sono sfide dal sito [Frontend mentor](https://www.frontendmentor.io/home)
 
 # Note
 
-* Per i design mobile e desktop vengono definire due misure, generalmente 375px e 1440px. Quindi in alcune sfide potrei non aver adeguatamente adattato il design tra questi due punti specifici.
+* Per i design mobile e desktop vengono definite generalmente due misure, 375px e 1440px. Quindi sono queste in cui i progetti funzionano al meglio.
