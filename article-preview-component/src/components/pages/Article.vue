@@ -48,15 +48,15 @@
             </div>
             <div class="flex items-center justify-around bg-gray-600 w-full h-[64px] rounded-b-2xl" v-if="shareSocial == 1">
                 <div class="flex items-center justify-start gap-4">
-                <h2 class="text-white tracking-[5px]">
+                <h2 class="text-gray-400 tracking-[5px]">
                     SHARE
                 </h2>
                     <img src="/icon-facebook.svg" alt="">
                     <img src="/icon-twitter.svg" alt="">
                     <img src="/icon-pinterest.svg" alt="">
                 </div>
-                <button @click="() => toggleShare()" class="text-white bg-gray-400 w-[35px] aspect-[1/1] flex flex-col justify-center items-center rounded-full">
-                    <img class="w-[50%]" src="/icon-share.svg" alt="Share">
+                <button @click="() => toggleShare()" class="bg-white w-[30px] aspect-[1/1] flex flex-col justify-center items-center rounded-full">
+                    <img class="w-[50%] text-white" src="/icon-share.svg" alt="Share">
                 </button>
             </div>
         </div>
@@ -64,5 +64,5 @@
 </template>
 
 <style scoped>
-  
+    
 </style>
