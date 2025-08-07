@@ -3,18 +3,17 @@
 </script>
 
 <template>
-    <header>
-
-    </header>
-    <main>
-        <slot/>
-    </main>
-    <footer>
-        <div class="attribution">
-            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-            Coded by <a href="#">Hazerin</a>.
-        </div>
-    </footer>
+    <section class="min-h-screen flex flex-col justify-between">
+        <main>
+            <slot/>
+        </main>
+        <footer>
+            <div class="attribution">
+                Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+                Coded by <a href="#">Hazerin</a>.
+            </div>
+        </footer>
+    </section>
 </template>
 
 <style scoped>
