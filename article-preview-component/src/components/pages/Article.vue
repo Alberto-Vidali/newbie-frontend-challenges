@@ -19,7 +19,7 @@
             <img class="w-fit rounded-2xl sm:rounded-r-none" src="/drawers.jpg" alt="">
         </div>
 
-        <div class="flex flex-col justify-between items-center h-[61.5%] sm:h-full gap-0">
+        <div class="flex flex-col justify-between items-center h-[61.5%] sm:h-full">
             <h1 class="font-semibold text-lg pt-8 sm:pt-0 px-8">
                 Shift the overall look and feel by adding these wonderful 
                 touches to furniture in your home
