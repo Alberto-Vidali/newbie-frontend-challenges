@@ -3,8 +3,8 @@
 </script>
 
 <template>
-    <section class="">
-        <img src="/image-omelette.jpeg" alt="">
+    <section class="max-w-[500px] bg-white rounded-2xl">
+        <img class="rounded-t-2xl" src="/image-omelette.jpeg" alt="omelette">
         <div class="flex flex-col p-8 gap-4 text-[15px] tracking-wide">
             <h1 class="text-4xl font-bold text-red-900">
                 Simple Omelette Recipe

@@ -3,8 +3,8 @@
 </script>
 
 <template>
-    <section class="min-h-screen flex flex-col justify-between">
-        <main>
+    <section class="min-h-screen flex flex-col justify-between sm:bg-amber-100">
+        <main class="flex justify-center sm:my-20">
             <slot/>
         </main>
         <footer>
