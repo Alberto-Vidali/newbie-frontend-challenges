@@ -1,1 +1,14 @@
 @import "tailwindcss";
+
+.balloon::after {
+    content: '';
+    position: absolute;
+    top: 100%; /* Posiziona la punta sotto il balloon */
+    left: 50%; /* Centra orizzontalmente */
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 15px solid var(--color-gray-700); /* Stessa colore del balloon */
+}
