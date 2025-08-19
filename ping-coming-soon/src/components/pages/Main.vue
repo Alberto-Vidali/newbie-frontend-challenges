@@ -1,5 +1,25 @@
 <script setup>
-    
+import { ref } from 'vue';
+
+
+    let hello;
+    const emailIsValid = ref(false)
+
+
+    function emailCheck() {
+        
+        for (let i = 0; i < hello.length; i++) {
+            console.log(hello[i])
+            if (hello[i] == "@" && emailIsValid.value == false) {
+                emailIsValid.value = true
+                console.log(emailIsValid.value)
+            } else if (hello[i] == "@" && emailIsValid.value == true) {
+                emailIsValid.value = false;
+                console.log(emailIsValid.value)
+            }
+        }
+        
+    }
 </script>
 
 <template>
@@ -16,10 +36,10 @@
             </div>
             <div class="flex flex-col w-full gap-5">
                 <div class="h-10 w-full rounded-full flex items-center justify-start border-1 border-gray-400">
-                    <input id="email-box" class="px-5 w-full focus-within:border-none focus-within:outline-none" type="text" placeholder="Your email address...">
+                    <input v-model="hello" id="email-box" class="px-5 w-full focus-within:border-none focus-within:outline-none" type="text" placeholder="Your email address...">
                 </div>
                 <div class="bg-blue-500 h-10 w-full rounded-full flex items-center justify-center">
-                    <button id="email-button" class="text-white">Notify Me</button>
+                    <button @click="emailCheck()" id="email-button" class="text-white w-full">Notify Me</button>
                 </div>
             </div>
             <img src="/illustration-dashboard.png" alt="">
