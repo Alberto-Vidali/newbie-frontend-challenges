@@ -1,24 +1,26 @@
 <script setup>
-import { ref } from 'vue';
+import { computed, ref } from 'vue';
 
 
-    let hello;
-    const emailIsValid = ref(false)
+    const emailIsValid = ref(0)
+    let hello = ref("")
 
 
     function emailCheck() {
+        emailIsValid.value = 0;
         
-        for (let i = 0; i < hello.length; i++) {
-            console.log(hello[i])
-            if (hello[i] == "@" && emailIsValid.value == false) {
-                emailIsValid.value = true
+        for (let i = 0; i < hello.value.length; i++) {
+            console.log(hello.value[i])
+            if (hello.value[i] == "@" && emailIsValid.value == 0) {
+                emailIsValid.value = 1
                 console.log(emailIsValid.value)
-            } else if (hello[i] == "@" && emailIsValid.value == true) {
-                emailIsValid.value = false;
+            } else if (hello.value[i] == "@" && emailIsValid.value == 1) {
+                emailIsValid.value = 2;
                 console.log(emailIsValid.value)
             }
         }
-        
+        if (emailIsValid.value == 0) emailIsValid.value = 2
+        hello.value = "";
     }
 </script>
 
@@ -35,9 +37,16 @@ import { ref } from 'vue';
                 </p>
             </div>
             <div class="flex flex-col w-full gap-5">
-                <div class="h-10 w-full rounded-full flex items-center justify-start border-1 border-gray-400">
+                <div v-if="emailIsValid == 0" class="h-10 w-full rounded-full flex items-center justify-start border-1 border-gray-400">
                     <input v-model="hello" id="email-box" class="px-5 w-full focus-within:border-none focus-within:outline-none" type="text" placeholder="Your email address...">
                 </div>
+                <div v-if="emailIsValid == 1" class="h-10 w-full rounded-full flex items-center justify-start border-1 border-gray-400">
+                    <input v-model="hello" id="email-box" class="px-5 w-full focus-within:border-none focus-within:outline-none text-green-400 focus-within:text-black" type="text" placeholder="We sent a confirmation email. Thanks!">
+                </div>
+                <div v-if="emailIsValid == 2" class="h-10 w-full rounded-full flex items-center justify-start border-1 border-gray-400">
+                    <input v-model="hello" id="email-box" class="px-5 w-full focus-within:border-none focus-within:outline-none text-red-400 focus-within:text-black" type="text" placeholder="This email address is not valid.">
+                </div>
+
                 <div class="bg-blue-500 h-10 w-full rounded-full flex items-center justify-center">
                     <button @click="emailCheck()" id="email-button" class="text-white w-full">Notify Me</button>
                 </div>
