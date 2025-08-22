@@ -25,18 +25,18 @@ import { computed, ref } from 'vue';
 </script>
 
 <template>
-    <section class="h-[1000px] flex flex-col items-center justify-between p-5">
+    <section class="h-[1000px] flex flex-col items-center justify-between p-5 sm:w-4xl">
         <div class="flex flex-col items-center justify-around gap-10">
             <img src="/logo.svg" alt="">
-            <div class="flex flex-col items-center">
-                <h2 class="text-[30px] text-gray-400">
+            <div class="flex flex-col items-center sm:gap-2">
+                <h2 class="text-[30px] sm:text-4xl text-gray-400">
                     We are launching <strong class="text-black">soon!</strong>
                 </h2>
-                <p>
+                <p class="sm:text-xl">
                     Subscribe and get notified
                 </p>
             </div>
-            <div class="flex flex-col w-full gap-5">
+            <div class="flex flex-col sm:flex-row w-full gap-5">
                 <div v-if="emailIsValid == 0" class="h-10 w-full rounded-full flex items-center justify-start border-1 border-gray-400">
                     <input v-model="hello" id="email-box" class="px-5 w-full focus-within:border-none focus-within:outline-none" type="text" placeholder="Your email address...">
                 </div>
@@ -47,7 +47,7 @@ import { computed, ref } from 'vue';
                     <input v-model="hello" id="email-box" class="px-5 w-full focus-within:border-none focus-within:outline-none text-red-400 focus-within:text-black" type="text" placeholder="This email address is not valid.">
                 </div>
 
-                <div class="bg-blue-500 h-10 w-full rounded-full flex items-center justify-center">
+                <div class="bg-blue-500 h-10 w-full rounded-full flex items-center justify-center sm:w-[30%]">
                     <button @click="emailCheck()" id="email-button" class="text-white w-full">Notify Me</button>
                 </div>
             </div>
