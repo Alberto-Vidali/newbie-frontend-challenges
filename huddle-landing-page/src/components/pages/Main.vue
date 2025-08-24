@@ -8,7 +8,7 @@
     <p class="">Huddle re-imagines the way we build communities. You have a voice, but so does
         your audience. Create connections with your users as you engage in genuine discussions.
     </p>
-    <button class="bg-white text-purple-700 rounded-full py-2 px-20">Register</button>
+    <button class="bg-white text-purple-700 rounded-full py-2 px-20 hover:bg-pink-300 hover:text-white">Register</button>
   </section>
 </template>
 

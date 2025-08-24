@@ -13,7 +13,18 @@
   <body class="flex flex-col flex-1">
     <slot/>
   </body>
-  <footer>
+  <footer class="flex flex-col gap-5">
+    <div class="flex justify-center gap-2">
+      <button class="text-md border-white border-1 rounded-full h-8 aspect-[1/1] text-white">
+          <i class="fa-brands fa-facebook-f"></i>
+      </button>
+      <button class="text-md border-white border-1 rounded-full h-8 aspect-[1/1] text-white">
+          <i class="fa-brands fa-twitter"></i>
+      </button>
+      <button class="text-md border-white border-1 rounded-full h-8 aspect-[1/1] text-white">
+          <i class="fa-brands fa-instagram"></i>
+      </button>
+    </div>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="#">Hazerin</a>.
