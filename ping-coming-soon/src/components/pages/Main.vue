@@ -1,10 +1,8 @@
 <script setup>
 import { computed, ref } from 'vue';
 
-
     const emailIsValid = ref(0)
     let hello = ref("")
-
 
     function emailCheck() {
         emailIsValid.value = 0;
