@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+.attribution {
+    color: white;
+    font-size: 12px; text-align: center;
+}
+
+.attribution a {
+    color: greenyellow
+}
+
+.purple {
+    background: hsl(257, 40%, 49%)
+}
