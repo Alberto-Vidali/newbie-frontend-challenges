@@ -4,21 +4,30 @@
 
 <template>
     <section class="flex flex-col flex-1">
-        <div class=" flex flex-col items-center justify-between flex-3 bg-gradient-to-b from-purple-700 to-blue-700 rounded-b-3xl text-white">
+        <div class=" flex flex-col items-center justify-between h-[350px] py-8 px-15 bg-gradient-to-b from-purple-700 to-blue-700 rounded-b-3xl text-white">
             <h2 class="">Your Result</h2>
-            <div>
-                <h1>76</h1>
-                <p>of 100</p>
+            <div class="flex flex-col justify-center items-center gap-3 text-center rounded-full bg-blue-700 h-[125px] aspect-[1/1]">
+                <h1 class="text-5xl font-bold">76</h1>
+                <p class="text-gray-300 text-sm">of 100</p>
             </div>
-            <h1>Great</h1>
-            <p>You scored higher than 65% of the people who have taken these tests.</p>
+            <div class="flex flex-col items-center gap-3">
+               <h1 class="text-3xl font-semibold">Great</h1>
+               <p class="text-sm text-center">You scored higher than 65% of the people who have taken these tests.</p> 
+            </div>
+            
         </div>
-        <div class="flex-7">
-            Summary
-
-            Reaction
-            80 / 100
-
+        <div class="">
+            <h3>Summary</h3>
+            <div class="flex justify-between">
+                <div class="flex">
+                    <img src="/icon-reaction.svg" alt="icon"><p>Reaction</p>
+                </div>
+                <div class="flex">
+                    <p>80</p><p>/ 100</p>
+                </div>
+                
+            </div>
+            
             Memory
             92 / 100
 
@@ -28,7 +37,9 @@
             Visual
             72 / 100
 
-            Continue
+            <button>
+               Continue 
+            </button>
         </div>
     </section>
 </template>
