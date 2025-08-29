@@ -16,28 +16,42 @@
             </div>
             
         </div>
-        <div class="">
-            <h3>Summary</h3>
-            <div class="flex justify-between">
-                <div class="flex">
-                    <img src="/icon-reaction.svg" alt="icon"><p>Reaction</p>
+        <div class="flex flex-col px-6 gap-5 pt-5">
+            <h3 class="font-bold">Summary</h3>
+            <div class="flex justify-between bg-red-50 p-2 rounded-xl">
+                <div class="flex gap-2">
+                    <img src="/icon-reaction.svg" alt="icon"><p class="text-red-500">Reaction</p>
                 </div>
-                <div class="flex">
-                    <p>80</p><p>/ 100</p>
+                <div class="flex gap-1">
+                    <p class="font-semibold">80</p><p class="text-gray-400">/ 100</p>
                 </div>
-                
             </div>
-            
-            Memory
-            92 / 100
+            <div class="flex justify-between bg-yellow-50 p-2 rounded-xl">
+                <div class="flex gap-2">
+                    <img src="/icon-memory.svg" alt="icon"><p class="text-yellow-500">Memory</p>
+                </div>
+                <div class="flex gap-1">
+                    <p class="font-semibold">92</p><p class="text-gray-400">/ 100</p>
+                </div>
+            </div>
+            <div class="flex justify-between bg-green-50 p-2 rounded-xl">
+                <div class="flex gap-2">
+                    <img src="/icon-verbal.svg" alt="icon"><p class="text-green-500">Verbal</p>
+                </div>
+                <div class="flex gap-1">
+                    <p class="font-semibold">61</p><p class="text-gray-400">/ 100</p>
+                </div>
+            </div>
+            <div class="flex justify-between bg-blue-50 p-2 rounded-xl">
+                <div class="flex gap-2">
+                    <img src="/icon-visual.svg" alt="icon"><p class="text-blue-500">Visual</p>
+                </div>
+                <div class="flex gap-1">
+                    <p class="font-semibold">72</p><p class="text-gray-400">/ 100</p>
+                </div>
+            </div>
 
-            Verbal
-            61 / 100
-
-            Visual
-            72 / 100
-
-            <button>
+            <button class="bg-gray-700 py-3 rounded-3xl text-white">
                Continue 
             </button>
         </div>
