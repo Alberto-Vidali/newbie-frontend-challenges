@@ -3,8 +3,8 @@
 </script>
 
 <template>
-    <section class="flex flex-col flex-1">
-        <div class=" flex flex-col items-center justify-between h-[350px] py-8 px-15 bg-gradient-to-b from-purple-700 to-blue-700 rounded-b-3xl text-white">
+    <section class="flex flex-col flex-1 sm:flex-row sm:justify-center sm:items-center sm:h-fit">
+        <div class=" flex flex-col items-center justify-between h-[350px] sm:h-[400px] sm:w-[320px] py-8 px-15 bg-gradient-to-b from-purple-700 to-blue-700 rounded-b-3xl sm:rounded-3xl text-white">
             <h2 class="">Your Result</h2>
             <div class="flex flex-col justify-center items-center gap-3 text-center rounded-full bg-blue-700 h-[125px] aspect-[1/1]">
                 <h1 class="text-5xl font-bold">76</h1>
@@ -16,7 +16,7 @@
             </div>
             
         </div>
-        <div class="flex flex-col px-6 gap-5 pt-5">
+        <div class="flex flex-col sm:justify-center px-6 gap-5 pt-5 bg-white sm:h-[400px] sm:w-[350px] sm:rounded-r-3xl">
             <h3 class="font-bold">Summary</h3>
             <div class="flex justify-between bg-red-50 p-2 rounded-xl">
                 <div class="flex gap-2">
@@ -51,7 +51,7 @@
                 </div>
             </div>
 
-            <button class="bg-gray-700 py-3 rounded-3xl text-white">
+            <button class="bg-gray-700 hover:bg-purple-500 py-3 rounded-3xl text-white">
                Continue 
             </button>
         </div>
